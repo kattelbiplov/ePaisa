@@ -1,0 +1,43 @@
+.footer {
+   
+    padding: 20px 0;
+    
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.footer-left {
+    font-size: 18px;
+}
+
+.footer-left img{
+    width: 300px;
+    height: 100px;
+}
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+

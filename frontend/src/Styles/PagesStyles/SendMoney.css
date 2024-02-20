@@ -1,0 +1,26 @@
+.sendmoney-part{
+    display: flex;
+}
+.sendmoney-right{
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.send-from{
+    height: 110px;
+    width: 600px;
+    border: 1px solid gainsboro;
+    padding: 20px;
+    margin-bottom: 20px;
+   
+}
+
+.send-money-form{
+    width: 600px;
+}
+
+.send-part{
+   margin: 0 auto;
+   width: 600px;
+   margin-top: 40px;
+}

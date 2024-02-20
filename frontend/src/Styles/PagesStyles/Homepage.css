@@ -1,0 +1,46 @@
+.homeConatiner{
+   
+    margin: 0 auto;
+    width: 90%;
+   margin-top: 50px;
+}
+
+.homeConatiner h3{
+    color: #007ea4;
+    font-family: ubunturegular;
+    line-height: 1.4;
+    font-size: 22px;
+}
+
+.homeLoginButton{
+    background: linear-gradient(125deg,#eb0,#fbdb67);
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    transition: all .3s ease 0s;
+    color: #111;
+    line-height: 1.5;
+   font-size: 16px;
+   margin-top: 20px;
+}
+
+.homeServiceCard{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeServiceCardLeft ul{
+    list-style: none;
+    padding: 0;
+}
+
+.homeServiceCardLeft ul li{
+    padding-bottom: 20px;
+}
+
+.homeServiceCardRight img{
+    height: 400px;
+    width: 500px;
+    border-radius: 0.7rem;
+}

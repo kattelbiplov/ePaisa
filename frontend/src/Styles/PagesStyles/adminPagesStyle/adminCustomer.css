@@ -1,0 +1,7 @@
+.customerAdmin-part{
+    display: flex;
+}
+.customerAdmin-right{
+    width: 100%;
+    padding: 10px 10px;
+}
