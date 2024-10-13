@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 5500;
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-app.use(cors({ origin: 'http://localhost:3000' }));
+// app.use(cors({ origin: 'http://localhost:3000' }));
 app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // for form data
