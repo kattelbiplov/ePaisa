@@ -12,7 +12,7 @@ const AdminModifyUsers = () => {
     const fetchAllUsers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5500/api/users/allUsers', {
+            const response = await fetch('http://localhost:8000/api/users/allUsers', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const AdminModifyUsers = () => {
     const deleteUserData = async (userId) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5500/api/users/deleteUser/${userId}`, {
+            const response = await fetch(`http://localhost:8000/api/users/deleteUser/${userId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

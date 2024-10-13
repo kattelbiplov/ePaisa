@@ -25,7 +25,7 @@ const SendMoney = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:5500/api/users/profile", {
+      const response = await fetch("http://localhost:8000/api/users/profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ const SendMoney = () => {
         toast.error("Insufficient balance");
         return;
       }
-      const response = await fetch("http://localhost:5500/api/users/send-money", {
+      const response = await fetch("http://localhost:8000/api/users/send-money", {
         method: "POST",
         headers: {
             Authorization: `Bearer ${token}`,
@@ -128,8 +128,15 @@ return (
           <p style={{ fontWeight: 'bold' }}>From Account</p>
           {userData && (
             <div className="send-from">
-              <h4>{userData.firstName} {userData.middleName} {userData.lastName}</h4>
+              <div className="send-from-area">
+                <div className="send-from-area-left">
+                   <h4>{userData.firstName} {userData.middleName} {userData.lastName}</h4>
               <p>{userData.mobileNumber}</p>
+                </div>
+             <div className="send-from-area-right">
+               <h4><span style={{fontSize:'15px'}}>Balance:</span>     {userData.balance}</h4>
+              </div>
+             </div>
             </div>
           )}
 

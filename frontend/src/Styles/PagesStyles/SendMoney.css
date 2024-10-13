@@ -24,3 +24,8 @@
    width: 600px;
    margin-top: 40px;
 }
+
+.send-from-area{
+    justify-content: space-between;
+    display: flex;
+}

@@ -12,7 +12,7 @@ const AdminStatement = () => {
     try {
       const token = localStorage.getItem('token');
       console.log('Token:', token);
-      const response = await fetch('http://localhost:5500/api/users/statement', {
+      const response = await fetch('http://localhost:8000/api/users/statement', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,6 @@ const AdminStatement = () => {
                       {data.map((item, index) => (
                         <tr key={index}>
                           <td>{new Date(item.createdAt).toLocaleDateString('en-CA')}</td>
-
                           <td>{item.sender}</td>
                           <td>{item.amount}</td>
                           <td>{item.receiver}</td>
@@ -84,7 +83,6 @@ const AdminStatement = () => {
                   <p>No data available</p>
                 )}
               </div>
-
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const Registration = () => {
         e.preventDefault();
         console.log(formData);
         try {
-            const response = await fetch('http://localhost:5500/api/users/registration', {
+            const response = await fetch('http://localhost:8000/api/users/registration', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const Statement = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:5500/api/users/statement', {
+      const response = await fetch('http://localhost:8000/api/users/statement', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,

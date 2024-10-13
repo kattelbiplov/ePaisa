@@ -1,11 +1,13 @@
 const router = require('express').Router();
+const csrf = require('csurf');
 const Transaction = require('../models/transactionModel');
 const User = require('../models/userModel');
 const authMiddleware = require('../middlewares/authMiddleware');
 const userModel = require('../models/userModel');
 
+const csrfProtection = csrf({ cookie: true });
 
-router.post('/send-money', authMiddleware, async (req, res) => {
+router.post('/send-money', authMiddleware, csrfProtection,async (req, res) => {
     console.log('Received request:', req.body);
     try {
         
@@ -46,21 +48,6 @@ router.post('/send-money', authMiddleware, async (req, res) => {
             // Increase the receiver's balance
             receiver.balance += req.body.amount;
             await receiver.save();
-         /* let Debitedmsg={
-            to:`${sender.email}`,
-            from:"katelbiplov5@gmail.com",
-            subject:"Transaction alert!",
-            text:"tero paisa kattyo jatha",
-          }
-          let Crediteddmsg={
-            to:`${receiver.email}`,
-            from:"katelbiplov5@gmail.com",
-            subject:"Transaction alert!",
-            text:"tero ma paisa aayo jatha",
-          }
-          await transporter.sendMail(Debitedmsg);
-          await transporter.sendMail(Crediteddmsg);
-          */
             res.status(200).send({
                 message: 'Transaction successful',
                 data: newTransaction,

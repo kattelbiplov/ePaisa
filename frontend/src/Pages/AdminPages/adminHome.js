@@ -10,7 +10,7 @@ const AdminHome = () => {
         try {
             const token = localStorage.getItem('token');
             console.log('Token:', token);
-            const response = await fetch('http://localhost:5500/api/users/allUsers', {
+            const response = await fetch('http://localhost:8000/api/users/allUsers', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
