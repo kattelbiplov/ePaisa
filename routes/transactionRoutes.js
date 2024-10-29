@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const csrf = require('csurf');
+// const csrf = require('csurf');
 const Transaction = require('../models/transactionModel');
 const User = require('../models/userModel');
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -7,7 +7,7 @@ const userModel = require('../models/userModel');
 
 const csrfProtection = csrf({ cookie: true });
 
-router.post('/send-money', authMiddleware, csrfProtection,async (req, res) => {
+router.post('/send-money', authMiddleware,async (req, res) => {
     console.log('Received request:', req.body);
     try {
         
